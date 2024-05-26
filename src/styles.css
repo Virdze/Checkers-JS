@@ -1,0 +1,28 @@
+body {
+    background-color: #013220;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 50px;
+    z-index: -1;
+}
+
+.board{
+    position: absolute;
+    height: 500px;
+    width: 1060px;
+    margin:20px;
+    color: #013220;
+    border: 2px solid white;
+    border-radius: 0px;
+    border-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+}
+
+.white-box{
+    background-color: #fff; /* Added background color for .box */
+    color: #013220;
+    padding: 20px;
+    
+}
