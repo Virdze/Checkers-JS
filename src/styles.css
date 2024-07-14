@@ -15,16 +15,39 @@ body {
 }
 
 .board {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
     width: 600px;
     height: 600px;
     margin-bottom: 40px;
 }
 .square {
-    width: 12.5%;
-    height: 12.5%;
+    width: 100%;
+    height: 100%;
     box-sizing: border-box;
+}
+
+
+.circle {
+    width: 80‰;
+    height: 80%;
+    border-radius: 50%;
+    margin: 10%;
+    background-size: cover;
+    background-position: center;
+}
+
+.white-piece-texture {
+    background-image: url('../white_piece.png');
+}
+
+.black-piece-texture{
+    background-image: url('../black_piece.png');
+}
+
+.test {
+    background-image: url('../image.png');
 }
 .black {
     background-color: black;
