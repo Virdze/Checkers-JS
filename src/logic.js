@@ -6,6 +6,11 @@
 ) 
 
 */
+let cell = {
+    color: String,
+    position: (Number,Number),
+    piece: String
+};
 let board = [];
 
 function buildBoard(){
@@ -28,11 +33,25 @@ function buildBoard(){
                     piece.classList.add('circle');
                     piece.classList.add('black');
                     square.appendChild(piece);
-    
-                    board.push(['w',(row,column),1]);
+                    
+                    let cell = {
+                        color: 'white',
+                        position: [row,column],
+                        piece: 1
+                    };
+
+                    board.push(cell);
                     
                 }
-                else board.push(['w',(row,column), 0]);
+                else {
+                    let cell = {
+                        color: 'white',
+                        position: [row,column],
+                        piece: 0
+                    };
+
+                    board.push(cell);
+                }
             }
             else{
                 square.classList.add('black')
@@ -42,15 +61,29 @@ function buildBoard(){
                     piece.classList.add('white');
                     square.appendChild(piece);
 
-                    board.push(['b', (row,column), 2]);
-                }else board.push(['b', (row,column), 0]);
-            }
+                    
+                    let cell = {
+                        color: 'white',
+                        position: [row,column],
+                        piece: 2
+                    };
+                    board.push(cell);
+                    
+                }
+                else {
+                    let cell = {
+                        color: 'black',
+                        position: [row,column],
+                        piece: 0
+                    };
 
-            
-            
+                    board.push(cell);
+                }
+            }
             myboard.appendChild(square);
         }
     }
+    console.log(board);
 }
 
 document.getElementById('start-game-button').addEventListener('click', function () {
