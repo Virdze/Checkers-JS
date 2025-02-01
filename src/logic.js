@@ -6,11 +6,7 @@
 ) 
 
 */
-let cell = {
-    color: String,
-    position: (Number,Number),
-    piece: String
-};
+
 let board = [];
 
 function buildBoard(){
@@ -92,6 +88,18 @@ document.getElementById('start-game-button').addEventListener('click', function 
     //disable the button
     button.setAttribute("disabled", "true");
 })
+
+
+document.getElementsByClassName('circle').addEventListener('click', () => {
+    console.log("draggable");
+})
+
+/*
+$('.circle').addEventListener('click', () => {
+    console.log("jquery")
+})
+
+*/
 
 function startGame(){
     buildBoard();
